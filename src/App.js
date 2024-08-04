@@ -3,6 +3,7 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Route, Routes } from "react-router";
 import Topbar from "./scenes/global/Topbar";
 import Dashboard from "./scenes/dashboard";
+import Sidebar from "./scenes/global/Leftbar";
 // import Charts from "./scenes/charts";
 // import Notes from "./scenes/notes";
 // import Wallet from "./scenes/wallet";
@@ -17,6 +18,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
+          <Sidebar />
           <div className="content">
             <Topbar />
             <Routes>
