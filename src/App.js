@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router";
 import Topbar from "./scenes/global/Topbar";
 import Dashboard from "./scenes/dashboard";
 import Sidebar from "./scenes/global/Leftbar";
-// import Charts from "./scenes/charts";
+import Bar from "./scenes/bar";
 // import Notes from "./scenes/notes";
 // import Wallet from "./scenes/wallet";
 // import Shop from "./scenes/shop";
@@ -23,7 +23,7 @@ function App() {
             <Topbar />
             <Routes>
               <Route path="/" element={<Dashboard />} />
-              {/* <Route path="/charts" element={<Charts />} /> */}
+              <Route path="/charts" element={<Bar />} />
               {/* <Route path="/notes" element={<Notes />} /> */}
               {/* <Route path="/wallet" element={<Wallet />} /> */}
               {/* <Route path="/shop" element={<Shop />} /> */}
