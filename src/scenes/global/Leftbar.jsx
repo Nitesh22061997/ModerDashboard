@@ -8,6 +8,7 @@ import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalance
 import AssignmentTurnedInOutlinedIcon from '@mui/icons-material/AssignmentTurnedInOutlined';
 import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
 import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import HomeIcon from '@mui/icons-material/Home';
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
@@ -31,14 +32,15 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
 const Leftbar = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
-    const [isCollapsed, setIsCollapsed] = useState(false);
+    const [isCollapsed, setIsCollapsed] = useState(true);
     const [selected, setSelected] = useState("Dashboard");
 
     return (
         <Box
             sx={{
-                "& .ps-sidebar-root": {
+                "& .ps-sidebar-container": {
                     background: `${colors.primary[400]} !important`,
+                    border: `none`
                 },
                 "& .ps-menu-icon": {
                     backgroundColor: "transparent !important",
@@ -55,8 +57,8 @@ const Leftbar = () => {
                 },
             }}
         >
-            <Sidebar collapsed={isCollapsed} style={{ height: "100vh" }}>
-                <Menu>
+            <Sidebar collapsed={isCollapsed} style={{ height: "60rem" }}>
+                <Menu display="flex">
                     {/* LOGO AND MENU ICON */}
                     <MenuItem
                         onClick={() => setIsCollapsed(!isCollapsed)}
@@ -113,11 +115,21 @@ const Leftbar = () => {
                         />
                         <Item
                             title="Invoices Balances"
-                            to="/invoices"
+                            to="/shop"
                             icon={<LocalMallOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
+                        <Box
+                            mt="500px">
+                            <Item
+                                title="Log Out"
+                                to="/logout"
+                                icon={<ExitToAppIcon />}
+                                selected={selected}
+                                setSelected={setSelected}
+                            />
+                        </Box>
                     </Box>
                 </Menu>
             </Sidebar>
