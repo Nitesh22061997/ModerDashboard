@@ -7,6 +7,11 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import "./index.css"
+import { tokens } from '../../theme';
+import { Typography, useTheme } from '@mui/material';
+
+
+// Static Dummy data start
 
 function createData(customer, order, account, statusby) {
     return { customer, order, account, statusby };
@@ -21,11 +26,20 @@ const rows = [
     createData('Chris patt', 83859402, 260, "delivered"),
 ];
 
+// Dummy data end
+
 export default function BasicTable() {
+
+    const theme = useTheme();
+    const colors = tokens(theme.palette.mode);
+
     return (
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} sx={{ backgroundColor: colors.primary[400] }}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                <TableHead>
+                <TableHead fontS>
+                    <Typography fontSize="20px" p="10px">
+                        Recent Order's
+                    </Typography>
                     <TableRow>
                         <TableCell>Customer</TableCell>
                         <TableCell align="left">Order No.</TableCell>

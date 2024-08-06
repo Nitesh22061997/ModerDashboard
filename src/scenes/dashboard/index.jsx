@@ -1,19 +1,17 @@
 import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 import { mockTransactions } from "../../data/mockData";
-import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import EmailIcon from "@mui/icons-material/Email";
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
 import Header from "../../components/Header";
-import LineChart from "../../components/LineChart";
-import GeographyChart from "../../components/GeographyChart";
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
 import BasicTable from "../notes";
 import Shop from "../shop";
+import Wallet from "../wallet";
 
 const Dashboard = () => {
     const theme = useTheme();
@@ -162,13 +160,6 @@ const Dashboard = () => {
                     gridRow="span 2"
                     backgroundColor={colors.primary[400]} mt="15px"
                 >
-                    <Typography
-                        variant="h5"
-                        fontWeight="600"
-                        sx={{ padding: "30px 30px 0 30px" }}
-                    >
-                        Sales Quantity
-                    </Typography>
                     <Box height="250px" mt="-20px">
                         <BarChart isDashboard={true} />
                     </Box>
@@ -182,49 +173,9 @@ const Dashboard = () => {
                     overflow="auto"
                     mx="15px" mt="15px"
                 >
-                    <Box
-                        display="flex"
-                        justifyContent="space-between"
-                        alignItems="center"
-                        borderBottom={`4px solid ${colors.primary[500]}`}
-                        colors={colors.grey[100]}
-                        p="15px"
-                    >
-                        <Typography color={colors.grey[100]} variant="h5" fontWeight="600">
-                            Recent Transactions
-                        </Typography>
+                    <Box>
+                        <Wallet />
                     </Box>
-                    {mockTransactions.map((transaction, i) => (
-                        <Box
-                            key={`${transaction.txId}-${i}`}
-                            display="flex"
-                            justifyContent="space-between"
-                            alignItems="center"
-                            borderBottom={`4px solid ${colors.primary[500]}`}
-                            p="15px"
-                        >
-                            <Box>
-                                <Typography
-                                    color={colors.greenAccent[500]}
-                                    variant="h5"
-                                    fontWeight="600"
-                                >
-                                    {transaction.txId}
-                                </Typography>
-                                <Typography color={colors.grey[100]}>
-                                    {transaction.user}
-                                </Typography>
-                            </Box>
-                            <Box color={colors.grey[100]}>{transaction.date}</Box>
-                            <Box
-                                backgroundColor={colors.greenAccent[500]}
-                                p="5px 10px"
-                                borderRadius="4px"
-                            >
-                                ${transaction.cost}
-                            </Box>
-                        </Box>
-                    ))}
                 </Box>
 
                 {/* ROW 3 STACK 1 */}
@@ -232,10 +183,12 @@ const Dashboard = () => {
                     gridColumn="span 12"
                     gridRow="span 3"
                     backgroundColor={colors.primary[400]}
-                    mt="15px"
+                    overflow="auto"
+                    mt="12px"
                 >
-                    <BasicTable />
-
+                    <Box >
+                        <BasicTable />
+                    </Box>
                 </Box>
 
                 {/* ROW 3 STACK 2 */}
@@ -246,7 +199,7 @@ const Dashboard = () => {
                     overflow="auto"
                     mx="15px" mt="15px" p="10px"
                 >
-                    <Box height="250px" mt="-20px">
+                    <Box mt="-20px">
                         <Shop />
                     </Box>
                 </Box>

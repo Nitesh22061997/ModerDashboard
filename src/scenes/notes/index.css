@@ -1,5 +1,5 @@
 .btn-success {
-    background-color: rgb(5, 72, 5);
+    background-color: rgb(4, 97, 4);
     color: rgb(98, 232, 98);
     border-radius: 12px;
     font-weight: 300;
@@ -8,8 +8,8 @@
 }
 
 .btn-danger {
-    background-color: rgb(81, 7, 7);
-    color: rgb(234, 76, 76);
+    background-color: rgb(166, 9, 9);
+    color: rgb(227, 101, 101);
     border-radius: 12px;
     font-weight: 300;
     border: none;
