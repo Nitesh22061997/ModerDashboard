@@ -1,23 +1,22 @@
-Documentation for Modern Dashboard
+<!-- Documentation for Modern Dashboard -->
 
-Title
+<!-- Title -->
 This is Modern Era Dashboard equipped with latest features built with Reactjs and Material UI
 
-Tools Used:
+<!-- Tools Used: -->
 Material UI for icons , styling and  fast paced UI development
 Nivo charts for adding attractive bars and charts 
 React proSidebar for adding Sidebar instead for  building everything from scratch
 
-Features added 
+<!-- Features added  -->
 Dark-Mode/Light Mode
 Collapsing Sidebar
 Working Side bar Menu
 Scrolling Recent Orders and Feedback
 
-Components and reference i took in development
+<!-- Components and reference i took in development -->
 
 src---> components , data , scene
-
 components--> contains resuable components like Bar chart, Header, StatBoxthat are used in other parts of page
 data--> contains dummy data for UI which will usually be the data of REST API
 scenes--> contains folders bar, dashboard , global, notes, shop, wallet
