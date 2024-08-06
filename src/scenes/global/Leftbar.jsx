@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
-import { Box, IconButton, Typography, useTheme } from "@mui/material";
+import { Box, IconButton, Typography, useTheme, useMediaQuery } from "@mui/material";
 import { Link } from "react-router-dom";
 import { tokens } from "../../theme";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
@@ -19,7 +19,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
             active={selected === title}
             style={{
                 color: colors.grey[100],
-                border: 'none', // Ensure no border on the MenuItem
+                border: 'none',
             }}
             onClick={() => setSelected(title)}
             icon={icon}
@@ -35,20 +35,25 @@ const Leftbar = () => {
     const colors = tokens(theme.palette.mode);
     const [isCollapsed, setIsCollapsed] = useState(true);
     const [selected, setSelected] = useState("Dashboard");
+    const isMediumScreen = useMediaQuery(theme.breakpoints.down('md'));
+
+    if (isMediumScreen) {
+        return null; // Don't render the sidebar on medium and smaller screens
+    }
 
     return (
         <Box
             sx={{
                 "& .ps-sidebar-container": {
                     background: `${colors.primary[400]} !important`,
-                    border: `none !important`, // Remove any border
+                    border: `none !important`,
                 },
                 "& .ps-menu-icon": {
                     backgroundColor: "transparent !important",
                 },
                 "& .ps-menu-button": {
                     padding: "5px 35px 5px 20px !important",
-                    border: 'none !important', // Ensure no border on the MenuButton
+                    border: 'none !important',
                 },
                 "& .ps-menu-button:hover": {
                     color: "#868dfb !important",
@@ -68,7 +73,7 @@ const Leftbar = () => {
                         style={{
                             margin: "10px 0 20px 0",
                             color: colors.grey[100],
-                            border: 'none', // Ensure no border
+                            border: 'none',
                         }}
                     >
                         {!isCollapsed && (
