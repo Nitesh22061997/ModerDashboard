@@ -7,11 +7,11 @@ const StatBox = ({ title, subtitle, icon, progress, increase }) => {
     const colors = tokens(theme.palette.mode);
 
     return (
-        <Box width="100%" m="0 30px">
+        <Box width="100%" m="0 18px">
             <Box display="flex" justifyContent="space-between">
                 <Box>
                     {icon}
-                    <Typography fontSize="10px" variant="h5" sx={{ color: colors.greenAccent[100] }}>
+                    <Typography mt={1} fontSize="10px" variant="h5" sx={{ color: colors.greenAccent[100] }}>
                         {subtitle}
                     </Typography>
 

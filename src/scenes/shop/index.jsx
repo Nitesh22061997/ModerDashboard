@@ -3,7 +3,6 @@ import React from 'react';
 import { data } from "../../data/comment";
 
 const Shop = () => {
-    console.log(data);
 
     return (
         <Box mt="20px">
@@ -25,6 +24,7 @@ const Shop = () => {
                             value={item.stars}
                             readOnly
                             precision={0.5}
+
                         />
                         <Typography variant='body1' sx={{ whiteSpace: 'pre-line' }}>
                             {item.comments}

@@ -19,6 +19,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
             active={selected === title}
             style={{
                 color: colors.grey[100],
+                border: 'none', // Ensure no border on the MenuItem
             }}
             onClick={() => setSelected(title)}
             icon={icon}
@@ -40,13 +41,14 @@ const Leftbar = () => {
             sx={{
                 "& .ps-sidebar-container": {
                     background: `${colors.primary[400]} !important`,
-                    border: `none`
+                    border: `none !important`, // Remove any border
                 },
                 "& .ps-menu-icon": {
                     backgroundColor: "transparent !important",
                 },
                 "& .ps-menu-button": {
                     padding: "5px 35px 5px 20px !important",
+                    border: 'none !important', // Ensure no border on the MenuButton
                 },
                 "& .ps-menu-button:hover": {
                     color: "#868dfb !important",
@@ -57,7 +59,7 @@ const Leftbar = () => {
                 },
             }}
         >
-            <Sidebar collapsed={isCollapsed} style={{ height: "60rem" }}>
+            <Sidebar collapsed={isCollapsed} style={{ height: "60rem", border: 'none' }}>
                 <Menu display="flex">
                     {/* LOGO AND MENU ICON */}
                     <MenuItem
@@ -66,6 +68,7 @@ const Leftbar = () => {
                         style={{
                             margin: "10px 0 20px 0",
                             color: colors.grey[100],
+                            border: 'none', // Ensure no border
                         }}
                     >
                         {!isCollapsed && (

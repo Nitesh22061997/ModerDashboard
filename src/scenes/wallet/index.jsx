@@ -14,7 +14,7 @@ const Wallet = () => {
                                 Popular Dishes
                             </Typography>
                         </Box>
-                        <Box pl={18}>
+                        <Box pl={20}>
 
                             <ArrowCircleRightOutlinedIcon />
                         </Box>

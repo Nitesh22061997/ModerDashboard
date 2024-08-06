@@ -8,6 +8,7 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchIcon from "@mui/icons-material/Search";
+import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 
 const Topbar = () => {
     const theme = useTheme();
@@ -38,10 +39,13 @@ const Topbar = () => {
                     )}
                 </IconButton>
                 <IconButton>
-                    <NotificationsOutlinedIcon />
+                    <MailOutlineOutlinedIcon />
                 </IconButton>
                 <IconButton>
                     <SettingsOutlinedIcon />
+                </IconButton>
+                <IconButton>
+                    <NotificationsOutlinedIcon />
                 </IconButton>
                 <IconButton>
                     <PersonOutlinedIcon />
