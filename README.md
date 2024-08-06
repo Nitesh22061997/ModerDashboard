@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+Documentation for Modern Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Title
+This is Modern Era Dashboard equipped with latest features built with Reactjs and Material UI
 
-## Available Scripts
+Tools Used:
+Material UI for icons , styling and  fast paced UI development
+Nivo charts for adding attractive bars and charts 
+React proSidebar for adding Sidebar instead for  building everything from scratch
 
-In the project directory, you can run:
+Features added 
+Dark-Mode/Light Mode
+Collapsing Sidebar
+Working Side bar Menu
+Scrolling Recent Orders and Feedback
 
-### `npm start`
+Components and reference i took in development
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+src---> components , data , scene
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+components--> contains resuable components like Bar chart, Header, StatBoxthat are used in other parts of page
+data--> contains dummy data for UI which will usually be the data of REST API
+scenes--> contains folders bar, dashboard , global, notes, shop, wallet
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+bar--> contains bar chart 
+dashboard--> it is main component that act as parent to other components and make the whole UI in dashboard section
+global--> it contains sidebar(leftbar) and Navbar(Topbar)
+notes-->  it is Recent orders section of dashboard contains notes of order delivered pending and cancelled
+shop-->  it contains feedback section from customers that has come  to the restaurant or shop
+wallet--> it contains other menus and popular dishes options
